@@ -35,8 +35,12 @@ jobs:
               git add invader.jar
               git commit -m "add: invader"
             working-directory: ${{ env.working-directory }}
-
-      - uses: release-drafter/release-drafter@v5
+        - name: Push
+            uses: ad-m/github-push-action@master
+            with:
+              branch: 'master'
+              github_token: ${{ secrets.TOKEN_KK }}
+        - uses: release-drafter/release-drafter@v5
         with:
           config-name: main.config.yml
         env:
