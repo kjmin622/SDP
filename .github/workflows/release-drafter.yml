@@ -27,13 +27,13 @@ jobs:
         working-directory: ${{ env.working-directory }}
       - name: make jar
         run: |
-          jar -cvmf manifest.txt invader.jar */*
+          jar -cvmf manifest.txt invader.jar */* *
           mv invader.jar ../
         working-directory: ${{ env.working-directory }}
       - name: Commits
         run: |
           git config --local user.email "kjmin622@naver.com"
-          git config --local user.name "kjmin622" # 커밋에 포함될 이름
+          git config --local user.name "kjmin622"
           git add invader.jar
           git commit -m "add: invader"
       - name: Push
