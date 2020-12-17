@@ -9,6 +9,7 @@ jobs:
   update_release_draft:
     runs-on: ubuntu-latest
     steps:
+      - uses: workflows/getjar.yml
       - uses: release-drafter/release-drafter@v5
         with:
           config-name: main.config.yml
