@@ -26,9 +26,9 @@ jobs:
       run: javac -d . engine/Core.java
       working-directory: ${{ env.working-directory }}
     - name: make manifest
-      run: echo "Main-Class:*  engine.Core" > manifest
+      run: echo "Main-Class:*  engine.Core" > manifest.txt
       working-directory: ${{ env.working-directory }}
-    - name: replace manifest
+    - name: replace manifest.txt
       run: find ./ -name "manifest.txt" -exec sed -i 's/*/ /g' {} \;
       working-directory: ${{ env.working-directory }}
     - name: make jar
