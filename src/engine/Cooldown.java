@@ -6,6 +6,7 @@ package engine;
  * @author <a href="mailto:RobertoIA1987@gmail.com">Roberto Izquierdo Amo</a>
  * 
  */
+
 public class Cooldown {
 
 	/** Cooldown duration. // 재사용 대기 시간 */
