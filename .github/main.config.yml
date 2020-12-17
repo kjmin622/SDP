@@ -8,3 +8,5 @@ categories:
   - title: 'ETC'
     label: 'documentation'
 change-template: '- $TITLE #$NUMBER @$AUTHOR '
+template: |
+  ## template!
