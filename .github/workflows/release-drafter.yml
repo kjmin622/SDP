@@ -34,7 +34,7 @@ jobs:
           git config --local user.name "kjmin622" # 커밋에 포함될 이름
           git add invader.jar
           git commit -m "add: invader"
-          working-directory: ${{ env.working-directory }}
+        working-directory: ${{ env.working-directory }}
       - name: Push
         uses: ad-m/github-push-action@master
         with:
