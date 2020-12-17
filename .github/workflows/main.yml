@@ -30,6 +30,8 @@ jobs:
       working-directory: ${{ env.working-directory }}
     - name: replace manifest
       run: find ./ -name "manifest.txt" -exec sed -i 's/*/ /g' {} \;
+      working-directory: ${{ env.working-directory }}
     - name: make jar
       run: jar -cvmf manifest.txt Test.jar */*
+      working-directory: ${{ env.working-directory }}
       
